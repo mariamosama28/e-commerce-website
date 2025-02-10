@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- start home page form -->
+        
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand logo"  href="#">
+                    <i class="fa-solid fa-shirt "></i>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="fa-solid fa-square-caret-down"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav">
+                        <li class="nav-item ">
+                            <a class="nav-link pe-4 text-end active" aria-current="page" href="app.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pe-4 text-end active" href="#shop">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pe-4 text-end active" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pe-4 text-end active" href="#about">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link pe-4 text-end dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Categories
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item active all-products " href="#">All Products</a></li>
+                                <li><a class="dropdown-item  " href="#">Flower shirt</a></li>
+                                <li><a class="dropdown-item " href="#">Formal shirt</a></li>
+                                <li><a class="dropdown-item " href="#">Pants</a></li>
+                                <li><a class="dropdown-item " href="#">Other</a></li>
+                            </ul>
+                        </li>
+                        <a class="nav-link pe-4 text-end bag" >
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section id="home" class="page-header d-flex flex-column align-items-center justify-content-center ">
+            <div class="container ">
+                <div class="page-header-content  ">
+                    <div class="page-header-text d-flex align-items-center m-3 justify-content-center flex-column text-white ">
+                        <h2 class="">#Shopping</h2>
+                        <p>Save more with coupons &amp; up to 70% off!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="shop" class="products py-4" id="shop">
+            <div class="container products-container d-flex justify-content-center align-items-center flex-wrap g-5">
+                
+            </div>
+        </section>
+        <section class="py-5 my-4 newsletters" id="contact">
+                <div class="container ">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="newstext col-md-6">
+                            <h4>Sign Up for newsletters</h4>
+                            <p>Get E-mail updates about our latest shop and <span>special offers</span></p>
+                        </div>
+                        <div class="form d-flex col-md-6">
+                            <input class="" type="email" placeholder="Your email address">
+                            <button class=" ">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <footer id="about" class="p2-5 mb-2 mt-4">
+            <div class="container">
+                <div class="row d-flex flex-row">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h4 >Contact</h4>
+                        <p><strong>Address:</strong> 562 Wellington Road, Street 32, San Francisco </p>
+                        <p><strong>Phone:</strong> +01 2222 365 /(+91) 01 2345 6789</p>
+                        <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+                        <div class="mt-4">
+                            <h4>Follow Us</h4>
+                            <div class="icon">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-pinterest-p"></i>
+                                <i class="fa-brands fa-youtube  "></i>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-lg-3 col-md-6 d-flex flex-column mb-4">
+                        <h4>About</h4>
+                        <a href="#">About Us</a>
+                        <a href="#">Delivery Information</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Conditions</a>
+                        <a href="#">Contact us</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex flex-column mb-4">
+                        <h4>My Account</h4>
+                        <a href="#">Sign In</a>
+                        <a href="#">View Cart</a>
+                        <a href="#">My Wishlist</a>
+                        <a href="#">Track My Order</a>
+                        <a href="#">Help</a>
+                    </div>
+                    <div class="install col-lg-3 col-md-6 d-flex flex-column mb-4">
+                        <h4>Install App</h4>
+                        <p>From App Store or Google Play</p>
+                        <p>Secured Payment Gateways</p>
+                        <img src="img/pay/pay.png" alt="">
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p class="text-center ">
+                        <i class="fa-regular fa-copyright"></i> 
+                            2024,Tech2 etc - HTML CSS Ecommerce Template
+                    </p>
+                </div>
+    
+            </div>
+        </footer>
+    
+    <!-- end home page form -->
+
+
+
+
+
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
