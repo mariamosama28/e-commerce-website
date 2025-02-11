@@ -126,45 +126,69 @@ let cartItems = [];
 let bagContent = document.createElement('div');
 bagContent.classList.add('overlay', 'd-none');
 bag.appendChild(bagContent);
-
 function updateCartDisplay() {
     bagContent.innerHTML = ""; 
 
     if (cartItems.length === 0) {
         bagContent.innerHTML = "<p>Your cart is empty.</p>";
-    } let totalPrice = 0;
+    }
 
-    cartItems.forEach(item => {
+    let totalPrice = 0;
+
+    cartItems.forEach((item, index) => {
         let itemElement = document.createElement('div');
-        itemElement.classList.add('bag-elements-div')
-        let itemTotal = parseFloat(item.price.replace('$', '')) * item.quantity; 
+        itemElement.classList.add('bag-elements-div');
+
+        let itemTotal = parseFloat(item.price.replace('$', '')) * item.quantity;
         totalPrice += itemTotal;
 
         itemElement.innerHTML = `
             <img src="${item.img}" width="50">
-            <div class = "name-price ">
-                T-shirt
-                <div>
-                    ${item.price} 
-                    <b>(${item.quantity})</b> = <b>$${itemTotal.toFixed(2)}</b>
+            <div class="name-price">
+                <div class="d-flex justify-content-between align-items-center gap-4">
+                    <div>
+                        T-shirt
+                        ${item.price} 
+                        <b>(${item.quantity})</b> = <b>$${itemTotal.toFixed(2)}</b>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-circle-xmark delete-btn" data-index="${index}"></i>
+                    </div>
                 </div>
-                
             </div>
         `;
+
         bagContent.appendChild(itemElement);
     });
 
     let totalElement = document.createElement('div');
-    totalElement.classList.add('total-price')
-    totalElement.innerHTML = `<h3 >Total Price: $${totalPrice.toFixed(2)}</h3>`;
+    totalElement.classList.add('total-price');
+    totalElement.innerHTML = `<h3>Total Price: $${totalPrice.toFixed(2)}</h3>`;
     bagContent.appendChild(totalElement);
 
+    document.querySelectorAll('.delete-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            let itemIndex = this.getAttribute('data-index'); 
+            deleteElement(itemIndex);
+        });
+    });
+
+    let totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+        number.innerText = totalItems; 
+
 }
+
+function deleteElement(index) {
+    cartItems.splice(index, 1);  
+    updateCartDisplay();        
+}
+
 
 bag.addEventListener('click', () => {
     updateCartDisplay();
     bagContent.classList.toggle('d-none');
 });
+
 
 document.querySelectorAll('.cart').forEach(button => {
     button.addEventListener('click', (e) => {
@@ -264,7 +288,7 @@ function createProductCard(product) {
             });
         }
         
-
+        
         let totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
         number.innerText = totalItems; 
         
