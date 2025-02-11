@@ -244,6 +244,7 @@ function createProductCard(product) {
     if (addToCart) {
         addToCart.addEventListener('click', (e) => {
             e.preventDefault();
+            e.stopPropagation();
             counter++
             number.innerText = counter
             let productName = productCard.querySelector('.card-text').textContent;
